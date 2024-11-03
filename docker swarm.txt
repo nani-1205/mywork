@@ -1,0 +1,14 @@
+  1  sudo apt update
+    2  apt install docker.io
+    3  docker info
+    4  docker swarm init
+    5  docker swarm join-token manager
+    6  docker swarm join-token worker
+    7  docker info
+    8  docker node ls
+    9 docker pull nginx
+   10  docker service create --replica=3 -p 8001:80 nginx
+   11  docker service create --help
+   12  docker service create --replicas=3 -p 8001:80 nginx
+   13  docker ps
+   14  docker run -it -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock dockersamples/visualizer
