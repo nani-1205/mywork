@@ -1,0 +1,27 @@
+  MySQL  { 1  apt update
+    2  apt install mysql-server -y
+    3  systemctl start mysql
+    4  systemctl enable MySQL 
+    5  sudo mysql_secure_installation (yes, yes, no ,0= min.8 num passwd)
+    6  sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf ( bind-address = 127.0.0.1 to bind-address = 0.0.0.0 )
+    7  sudo mysql -u root -p (123456789)
+    8  sudo systemctl restart mysql
+    9  sudo systemctl status mysql}
+
+
+
+
+
+
+
+   mango dB  [10  apt-get install gnupg curl
+   11  curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc |    sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg    --dearmor
+   12  echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+   13  sudo apt-get update
+   14  sudo apt-get install -y mongodb-org
+   15  ps --no-headers -o comm 1
+   16  sudo systemctl start mongod
+   17  sudo systemctl status mongod
+   18  vim /etc/mongod.conf ( bind-address = 127.0.0.1 to bind-address = 0.0.0.0 ) 
+   19  service mongod restart
+   20  sudo systemctl status mongod]
